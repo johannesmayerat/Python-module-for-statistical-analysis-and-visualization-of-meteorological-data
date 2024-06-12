@@ -259,7 +259,7 @@ def Apply_SNHT(idata=[], window=48):
 	N = 2.*wd
 
 	Tk = np.zeros(len(idata))
-	for i in range(len(idata)):
+	for i in range(1,len(idata)):
 		# first few months
 		if i <= wd:
 			Tk[i] = (len(Z[0:i])*(np.mean(Z[0:i]) - np.mean(Z[0:i+wd]))**2. + N/2.*(np.mean(Z[i:i+wd]) - np.mean(Z[0:i+wd]))**2.)/np.std(Z[0:i+wd])**1.
